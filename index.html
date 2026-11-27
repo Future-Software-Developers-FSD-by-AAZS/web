@@ -78,8 +78,8 @@
   <!-- Main Sticky Navigation Header -->
   <header class="sticky top-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800">
     <div class="h-1 w-full brand-border-gradient"></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20 gap-3">
+    <div class="max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap items-center justify-between min-h-20 py-3 gap-3">
         <!-- Architectural Brand Lockup (FSD + AAZS LLP Monogram) -->
         <a href="#top" class="flex items-center gap-3 group shrink-0">
           <div class="w-11 h-11 rounded-xl bg-fsdNavy dark:bg-slate-800 border border-slate-700/60 flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
@@ -103,7 +103,7 @@
         </a>
 
         <!-- Desktop Navigation Links -->
-        <nav class="hidden xl:flex items-center gap-5 text-sm font-semibold text-slate-700 dark:text-slate-300">
+        <nav class="hidden 2xl:flex items-center gap-5 text-sm font-semibold text-slate-700 dark:text-slate-300">
           <a href="#vision" class="hover:text-fsdBlue dark:hover:text-aazsCyan transition-colors" data-i18n="nav_vision">Vision</a>
           <a href="#plan25" class="hover:text-fsdBlue dark:hover:text-aazsCyan transition-colors" data-i18n="nav_plan">25-Year Plan</a>
           <a href="#services" class="hover:text-fsdBlue dark:hover:text-aazsCyan transition-colors" data-i18n="nav_services">Services</a>
@@ -116,26 +116,26 @@
         </nav>
 
         <!-- Controls: Theme Switcher + Language Selector + Mobile Menu -->
-        <div class="flex items-center gap-2 sm:gap-3">
+        <div class="flex w-full sm:w-auto items-center justify-between sm:justify-end gap-2 sm:gap-3">
           <!-- Theme Switcher (Default: System) -->
           <div class="inline-flex items-center bg-slate-100 dark:bg-slate-800 p-1 rounded-xl border border-slate-200 dark:border-slate-700" role="group" aria-label="Theme Switcher">
             <button type="button" data-theme-btn="system" class="theme-btn px-2.5 py-1.5 rounded-lg text-xs font-semibold transition-all flex items-center gap-1" title="System Theme">
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-              <span class="hidden sm:inline" data-i18n="theme_system">System</span>
+              <span class="hidden lg:inline" data-i18n="theme_system">System</span>
             </button>
             <button type="button" data-theme-btn="light" class="theme-btn px-2.5 py-1.5 rounded-lg text-xs font-semibold transition-all flex items-center gap-1" title="Light Theme">
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-              <span class="hidden sm:inline" data-i18n="theme_light">Light</span>
+              <span class="hidden lg:inline" data-i18n="theme_light">Light</span>
             </button>
             <button type="button" data-theme-btn="dark" class="theme-btn px-2.5 py-1.5 rounded-lg text-xs font-semibold transition-all flex items-center gap-1" title="Dark Theme">
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
-              <span class="hidden sm:inline" data-i18n="theme_dark">Dark</span>
+              <span class="hidden lg:inline" data-i18n="theme_dark">Dark</span>
             </button>
           </div>
 
           <!-- Required Exact Language Selector (English -> Urdu -> Sindhi -> Rest Ascending) -->
           <div class="relative">
-            <select id="desktop-language" aria-label="Language" class="bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 text-xs sm:text-sm font-semibold rounded-xl border border-slate-300 dark:border-slate-700 px-3 py-2 pr-7 focus:outline-none focus:ring-2 focus:ring-aazsCyan cursor-pointer">
+            <select id="desktop-language" aria-label="Language" class="w-24 md:w-auto bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 text-xs sm:text-sm font-semibold rounded-xl border border-slate-300 dark:border-slate-700 px-3 py-2 pr-7 focus:outline-none focus:ring-2 focus:ring-aazsCyan cursor-pointer">
               <option value="en" selected>English</option>
               <option value="ur">اردو</option>
               <option value="sd">سنڌي</option>
@@ -154,7 +154,7 @@
           </div>
 
           <!-- Mobile Navigation Toggle -->
-          <button id="mobile-menu-btn" type="button" aria-label="Toggle Menu" class="xl:hidden p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">
+          <button id="mobile-menu-btn" type="button" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu" class="2xl:hidden p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
           </button>
         </div>
@@ -162,7 +162,7 @@
     </div>
 
     <!-- Mobile Navigation Drawer -->
-    <div id="mobile-menu" class="hidden xl:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 py-4">
+    <div id="mobile-menu" class="hidden 2xl:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 py-4">
       <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-sm font-semibold">
         <a href="#vision" class="mobile-nav-link px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800" data-i18n="nav_vision">Vision</a>
         <a href="#plan25" class="mobile-nav-link px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800" data-i18n="nav_plan">25-Year Plan</a>
@@ -187,7 +187,7 @@
       </div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div class="lg:col-span-7 space-y-6">
             <div class="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-fsdNavy/5 dark:bg-sky-500/10 border border-fsdBlue/20 dark:border-sky-400/20 text-xs font-bold text-fsdBlue dark:text-sky-300">
               <span class="w-2 h-2 rounded-full bg-aazsMagenta"></span>
@@ -286,7 +286,7 @@
           <h2 class="text-3xl sm:text-4xl font-extrabold text-fsdNavy dark:text-white mt-2" data-i18n="vision_heading">Vision, Mission &amp; Strategic Objectives</h2>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-8 mb-14">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-14">
           <!-- Vision Card -->
           <div class="rounded-2xl p-8 bg-gradient-to-br from-fsdNavy to-fsdBlue text-white shadow-lg">
             <div class="w-12 h-12 rounded-xl bg-white/15 flex items-center justify-center mb-5">
@@ -311,7 +311,7 @@
         </div>
 
         <!-- 5 Core Strategic Objectives -->
-        <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
           <div class="rounded-2xl p-6 bg-slate-50 dark:bg-slate-800/70 border border-slate-200 dark:border-slate-700/80">
             <span class="text-xs font-extrabold text-fsdBlue dark:text-aazsCyan">01</span>
             <h4 class="text-base font-bold text-fsdNavy dark:text-white mt-2 mb-2" data-i18n="obj_1_title">Global Enterprise Delivery</h4>
@@ -369,7 +369,7 @@
         </div>
 
         <!-- 5-Phase Overview Timeline Strip -->
-        <div class="grid md:grid-cols-5 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
           <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border-t-4 border-fsdNavy dark:border-sky-400 border border-slate-200 dark:border-slate-800">
             <div class="text-xs font-extrabold text-fsdBlue dark:text-sky-400">2026–2030</div>
             <h4 class="font-bold text-sm text-fsdNavy dark:text-white mt-1" data-i18n="h1_short">Foundation &amp; Export Scale</h4>
@@ -410,7 +410,7 @@
           </p>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div class="rounded-2xl p-7 bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 hover:border-fsdBlue transition-colors">
             <div class="text-xs font-extrabold text-fsdBlue dark:text-aazsCyan mb-3">01</div>
             <h3 class="text-lg font-extrabold text-fsdNavy dark:text-white mb-2" data-i18n="srv_1_title">Enterprise Software Engineering</h3>
@@ -467,7 +467,7 @@
           </p>
         </div>
 
-        <div class="grid lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <!-- SaaS -->
           <div class="rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-8 shadow-sm flex flex-col justify-between">
             <div>
@@ -539,7 +539,7 @@
           </p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="rounded-2xl p-7 bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80">
             <div class="flex items-center justify-between mb-3">
               <span class="px-2.5 py-1 rounded-md bg-fsdBlue/10 text-fsdBlue dark:text-sky-300 text-xs font-bold" data-i18n="prj_1_tag">FinTech &amp; Payments</span>
@@ -604,7 +604,7 @@
           </a>
         </div>
 
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <div class="rounded-2xl p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
             <div class="w-12 h-12 rounded-xl bg-fsdNavy text-white font-extrabold text-xl flex items-center justify-center mb-4">L</div>
             <h3 class="text-lg font-extrabold text-fsdNavy dark:text-white">Ledgr</h3>
@@ -655,7 +655,7 @@
           </p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Parent & Commercial Companies -->
           <div class="rounded-2xl p-7 bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 space-y-5">
             <h3 class="text-base font-extrabold uppercase tracking-wider text-fsdNavy dark:text-sky-300 border-b border-slate-200 dark:border-slate-700 pb-3" data-i18n="eco_col_1">Parent &amp; Commercial Entities</h3>
@@ -727,7 +727,7 @@
           </p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <!-- ISO / IEC -->
           <div class="rounded-2xl p-7 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
             <h3 class="text-base font-extrabold text-fsdNavy dark:text-white mb-4 flex items-center gap-2">
@@ -774,7 +774,7 @@
     <!-- Contact & Official Support Section -->
     <section id="contact" class="py-20 bg-white dark:bg-slate-900">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-12 gap-12 items-start">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           <div class="lg:col-span-5 space-y-6">
             <span class="text-xs font-extrabold uppercase tracking-widest text-aazsMagenta dark:text-pink-400" data-i18n="cnt_kicker">Global Desk &amp; Support</span>
             <h2 class="text-3xl sm:text-4xl font-extrabold text-fsdNavy dark:text-white" data-i18n="cnt_heading">Start a Conversation With FSD</h2>
@@ -810,7 +810,7 @@
             <form id="inquiry-form" class="rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 p-6 sm:p-8 space-y-5 shadow-sm">
               <h3 class="text-xl font-extrabold text-fsdNavy dark:text-white" data-i18n="form_title">Direct Project &amp; Partnership Inquiry</h3>
 
-              <div class="grid sm:grid-cols-2 gap-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label for="inq-name" class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5" data-i18n="form_name">Full Name</label>
                   <input id="inq-name" type="text" required class="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-aazsCyan" />
@@ -821,7 +821,7 @@
                 </div>
               </div>
 
-              <div class="grid sm:grid-cols-2 gap-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label for="inq-org" class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5" data-i18n="form_org">Company / Organization</label>
                   <input id="inq-org" type="text" class="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-aazsCyan" />
@@ -858,7 +858,7 @@
   <footer class="bg-fsdNavy text-slate-300 border-t border-slate-800">
     <div class="h-1 w-full brand-border-gradient"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-      <div class="grid md:grid-cols-4 gap-10 pb-10 border-b border-slate-800">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-10 border-b border-slate-800">
         <div class="md:col-span-2 space-y-4">
           <div class="flex items-center gap-3">
             <span class="text-2xl font-extrabold text-white tracking-tight">FSD</span>
@@ -3953,7 +3953,7 @@
           </div>
         </div>
         <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-5 leading-relaxed">${h.summary}</p>
-        <ul class="mt-6 grid md:grid-cols-3 gap-4">
+        <ul class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
           ${h.milestones.map((m, idx) => `
             <li class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 text-xs sm:text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
               <span class="font-extrabold text-aazsCyan block mb-1">0${idx + 1}</span>
@@ -4015,9 +4015,15 @@
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     if (mobileMenuBtn && mobileMenu) {
-      mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+      mobileMenuBtn.addEventListener('click', () => {
+        const isExpanded = mobileMenu.classList.toggle('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', String(!isExpanded));
+      });
       document.querySelectorAll('.mobile-nav-link').forEach(link => {
-        link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        });
       });
     }
 
